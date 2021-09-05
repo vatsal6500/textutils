@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from 'react-router-dom';
 
 
 
@@ -64,20 +64,20 @@ function App() {
       {/* <Navbar/> */}
       {/* /about         |   both will show about page so its a 
           /about/user    |     good prcatice to use "exact       */}
-      <Router>
+      {/* <Router> */}
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} toggleMode1={toggleMode1}/>
         <Alert exact alert={alert}/>
         <div className="container my-3">
-          <Switch>
+          {/* <Switch>
             <Route exact path="/about">
               <About/>
             </Route>
-            <Route path="/">
+            <Route path="/"> */}
               <TextForm heading="Enter Text to Analyze Below" showAlert={showAlert} mode={mode}/>
-            </Route>
-          </Switch>
+            {/* </Route>
+          </Switch> */}
           </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
